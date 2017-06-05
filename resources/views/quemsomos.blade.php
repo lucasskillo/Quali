@@ -19,36 +19,55 @@
                 <!-- About company -->
                 <div class="row mt-4">
                     <div class="col-md-7">
-                        <p class="lead">Causa defui dolus genitus haero in nibh saluto uxor.</p>
-                        <p>Acsi bene capto letalis magna neo pagus wisi. Paratus torqueo veniam. Damnum ea eros ideo laoreet.</p>
-                        <p>Euismod mos tation. Erat neo pagus refero ullamcorper voco. Camur ibidem iusto plaga praesent vulputate ymo. Euismod ex neo quibus sit tincidunt veniam vereor. Imputo incassum lenis natu nibh olim praesent sed suscipit.</p>
+                        <p class="text-justify">A Qualimentos Jr., empresa júnior do curso de Engenharia de Alimentos, com sede na Faculdade de Zootecnia
+                            e Engenharia de Alimentos da Universidade de São Paulo (FZEA/USP), atua, há mais de 12 anos, na prestação
+                            de serviços e no desenvolvimento de projetos na área de Consultoria em Engenharia de Alimentos.
+                            Apresentando participação ativa no Movimento Empresa Junior (MEJ), através da filiação ao Núcleo
+                            de Empresas Juniores da Universidade de São Paulo (USP Júnior) e federação à Federação de Empresas
+                            Juniores do Estado de São Paulo (FEJESP).</p>
+
+                        <p class="text-justify">Trata – se de uma empresa sem fins lucrativos que tem como princípio fornecer soluções eficientes e
+                            de custo reduzido. Para tal fim, a empresa conta com a infraestrutura disponibilizada pela Faculdade
+                            de Zootecnia e Engenharia de Alimentos (FZEA), campus da Universidade de São Paulo localizado na
+                            cidade de Pirassununga – SP, e ainda, com o apoio dos docentes e da grade curricular do curso de
+                            Engenharia de Alimentos. A Qualimentos Jr. considera essencial a valorização de seus clientes e
+                            trabalha com excelência em seus projetos através de um atendimento de qualidade e do comprometimento
+                            em seus serviços.</p>
+
+                        <p class="text-justify">Buscando o investimento constante na atualização e na capacitação de seus membros, bem como o incentivo
+                            a liderança e ao empreendedorismo dos mesmos, a Qualimentos Jr. promove visitas técnicas em empresas
+                            relacionadas à grande área da Engenharia de Alimentos. Além de projetos sociais em instituições
+                            localizadas na cidade de Pirassununga, participação em eventos e treinamentos promovidos pelo MEJ e,
+                            ainda, realiza Workshops e outros eventos internos destinados a comunidade acadêmica da FZEA,
+                            onde oferece a oportunidade de contato entre profissionais especializados em diferentes áreas do
+                            conhecimento e alunos e docentes da FZEA.</p>
                     </div>
                     <!-- Slideshow banner -->
                     <div class="col-md-5">
                         <!-- List Accordion -->
                         <div class="card-accordion card-accordion-list-style card-accordion-icons-left" id="list-accordion" role="tablist" aria-multiselectable="true">
                             <div class="card">
-                                <div class="card-header py-0 px-0"> <a data-toggle="collapse" data-parent="#list-accordion" href="#collapseOne" class="panel-title collapsed">Our Mission</a> </div>
+                                <div class="card-header py-0 px-0"> <a data-toggle="collapse" data-parent="#list-accordion" href="#collapseOne" class="panel-title collapsed">Nossa Missão</a> </div>
                                 <div id="collapseOne" class="collapse">
-                                    <div class="card-block">Ea esse ibidem paratus patria volutpat. Aliquam elit ille luptatum neo nisl paratus pecus pertineo voco.</div>
+                                    <div class="card-block text-justify">Capacitamos nossos membros no âmbito profissional e social, garantindo inovação e solução empreendedora para nossos clientes na área de alimentos.</div>
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card-header py-0 px-0"> <a data-toggle="collapse" data-parent="#list-accordion" href="#collapseTwo" class="panel-title collapsed">Our Process</a> </div>
+                                <div class="card-header py-0 px-0"> <a data-toggle="collapse" data-parent="#list-accordion" href="#collapseTwo" class="panel-title collapsed">Nossos Processos</a> </div>
                                 <div id="collapseTwo" class="collapse">
-                                    <div class="card-block">Ad iustum odio premo refoveo sino ymo. Adipiscing cogo commoveo hendrerit importunus loquor patria roto.</div>
+                                    <div class="card-block text-justify">Ad iustum odio premo refoveo sino ymo. Adipiscing cogo commoveo hendrerit importunus loquor patria roto.</div>
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card-header py-0 px-0"> <a data-toggle="collapse" data-parent="#list-accordion" href="#collapseThree" class="panel-title collapsed">How We Work</a> </div>
+                                <div class="card-header py-0 px-0"> <a data-toggle="collapse" data-parent="#list-accordion" href="#collapseThree" class="panel-title collapsed">Como Trabalhamos</a> </div>
                                 <div id="collapseThree" class="collapse">
-                                    <div class="card-block">Ad cogo loquor luptatum neo nisl saluto singularis valde. Bene lucidus ludus refero saluto.</div>
+                                    <div class="card-block text-justify">Ad cogo loquor luptatum neo nisl saluto singularis valde. Bene lucidus ludus refero saluto.</div>
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card-header py-0 px-0"> <a data-toggle="collapse" data-parent="#list-accordion" href="#collapseFour" class="panel-title collapsed">What We Do</a> </div>
+                                <div class="card-header py-0 px-0"> <a data-toggle="collapse" data-parent="#list-accordion" href="#collapseFour" class="panel-title collapsed">O que fazemos</a> </div>
                                 <div id="collapseFour" class="collapse">
-                                    <div class="card-block">Defui imputo iustum jus te. Enim eros saluto sit. Augue eros luctus probo turpis.</div>
+                                    <div class="card-block text-justify">Defui imputo iustum jus te. Enim eros saluto sit. Augue eros luctus probo turpis.</div>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +76,7 @@
 
                 <div class="title-divider mt-4">
                     <h3>
-                        <span>Our <span class="font-weight-normal text-muted">Values</span></span>
+                        <span>Nossos <span class="font-weight-normal text-muted">Valores</span></span>
                     </h3>
                 </div>
                 <div class="row">
@@ -67,49 +86,23 @@
                             <li>
                                 <i class="fa-li fa fa-check text-primary"></i>
                                 <h4>
-                                    Abico Premo Veniam Voco
+                                    Trabalho com Qualidade
                                 </h4>
                                 Duis jus pagus torqueo. Praemitto scisco ymo.
                             </li>
                             <li>
                                 <i class="fa-li fa fa-check text-primary"></i>
                                 <h4>
-                                    Causa Fere Proprius Suscipit
+                                    Baixo Custo
                                 </h4>
                                 Diam fere illum in pneum typicus usitas valde validus venio.
                             </li>
                             <li>
                                 <i class="fa-li fa fa-check text-primary"></i>
                                 <h4>
-                                    Consectetuer Nibh Singularis Vel
+                                    Comprometimento com o Cliente
                                 </h4>
                                 Decet et lucidus nunc oppeto saepius venio.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- List Items -->
-                        <ul class="fa-ul list-lg">
-                            <li>
-                                <i class="fa-li fa fa-check text-primary"></i>
-                                <h4>
-                                    Adipiscing Aptent Ibidem Quidem
-                                </h4>
-                                Conventio letalis nibh tum. Accumsan antehabeo erat gemino ideo olim oppeto plaga scisco.
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-check text-primary"></i>
-                                <h4>
-                                    Consectetuer Haero Modo Pneum
-                                </h4>
-                                Commodo fere gravis in inhibeo nunc paulatim praesent.
-                            </li>
-                            <li>
-                                <i class="fa-li fa fa-check text-primary"></i>
-                                <h4>
-                                    Modo Tamen Tation Volutpat
-                                </h4>
-                                Euismod uxor velit. Eu importunus oppeto quidne vindico vulputate.
                             </li>
                         </ul>
                     </div>

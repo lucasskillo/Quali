@@ -17,6 +17,20 @@
                     <small>Conheça nossos parceiros</small>
                 </h2>
                 <p>Segue abaixo nossos parceiros:</p>
+                <blockquote class="blockquote">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <footer class="blockquote-footer">
+                        Someone famous in
+                        <cite title="Source Title">Source Title</cite>
+                    </footer>
+                </blockquote>
+                <blockquote class="blockquote blockquote-reverse">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <footer class="blockquote-footer">
+                        Someone famous in
+                        <cite title="Source Title">Source Title</cite>
+                    </footer>
+                </blockquote>
             </div>
         </div>
     </div>

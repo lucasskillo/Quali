@@ -32,7 +32,7 @@
 
 
     <!-- Le fav and touch icons - @todo: fill with your icons or remove -->
-    <link rel="shortcut icon" href="assets/assets/img/icons/favicon.png">
+    <link rel="shortcut icon" href="assets/img/icons/favicon.ico">
     <link rel="apple-touch-icon" sizes="114x114" href="assets/assets/img/icons/114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/assets/img/icons/72x72.png">
     <link rel="apple-touch-icon" href="assets/assets/img/icons/default.png">
@@ -81,11 +81,13 @@
     <div class="bg-grey text-sm py-3">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-7">
                     <p class="mb-0">Todos direitos reservados | Copyright 2017 &copy; Qualimentos</p>
                 </div>
+                <div class="col-md-5">
+                    <p class="text-right">2018 começa em: <span class="countdown font-weight-bold" data-countdown="2018/01/01 00:00:01"></span></p>
+                </div>
             </div>
-            <a href="#top" class="btn btn-icon btn-inverse pos-fixed pos-b pos-r mr-3 mb-3 scroll-state-hidden hidden-md-down" title="Back to top" data-scroll="scroll-state"><i class="fa fa-chevron-up"></i></a>
         </div>
     </div>
 </footer>

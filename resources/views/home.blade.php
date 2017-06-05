@@ -21,7 +21,7 @@
                 <span data-typed='["Empresa Junior da", "Criação de novos prod", "Somos à Melhor consultoria de Eng. de Alimentos",
                 "O que está esperando ? Venha nos conhecer"]' data-typed-settings='{"delay":2000, "speed":120,"breakLines":false, "deleteDelay":1400, "doneClass":{"#get-btn":"animated fadeIn"}}'></span>
             </h3>
-            <a href="#" class="btn btn-inverse btn-lg text-uppercase font-weight-bold py-3 px-4 animate-pending mt-3"
+            <a href="/quemsomos" class="btn btn-inverse btn-lg text-uppercase font-weight-bold py-3 px-4 animate-pending mt-3"
                id="get-btn">Sobre nós <i class="fa fa-rocket"></i></a>
         </div>
     </div>

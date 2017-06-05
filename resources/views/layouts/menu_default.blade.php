@@ -27,7 +27,7 @@
                 <div class="header-block flex-last">
 
                     <!-- mobile collapse menu button - data-toggle="collapse" = default BS menu - data-toggle="jpanel-menu" = jPanel Menu - data-toggle="overlay" = Overlay Menu -->
-                    <a href="#top" class="btn btn-link btn-icon text-white header-btn float-right hidden-lg-up" data-toggle="jpanel-menu" data-target=".navbar-main" data-direction="right"> <i class="fa fa-bars"></i> </a>
+                    <a href="#top" class="btn btn-link btn-icon text-white header-btn float-right hidden-lg-up" data-toggle="jpanel-menu" data-target=".navbar-main" data-direction="right"> <i class="fa fa-bars" style="color: black"></i> </a>
                 </div>
 
                 <div class="navbar navbar-toggleable-md">
