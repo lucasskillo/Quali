@@ -18,18 +18,38 @@
                 </h2>
                 <p>Segue abaixo nossos parceiros:</p>
                 <blockquote class="blockquote">
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                    <footer class="blockquote-footer">
-                        Someone famous in
-                        <cite title="Source Title">Source Title</cite>
-                    </footer>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="assets/img/ACIP.jpg" alt="Picture of frog by Ben Fredericson" class="img-fluid">
+                        </div>
+                        <div class="col-md-8">
+                            <h4 class="timeline-item-title">
+                                <a href="#">ACIP</a>
+                            </h4>
+                            <p class="timeline-item-description">A ACIP (Associação Comercial e Industrial de Pirassununga)
+                                foi fundada em 1938 a partir da união de 98 comerciantes, industriais e representantes de
+                                firmas estabelecidas em Pirassununga com o objetivo de representar, apoiar e lutar pelos
+                                interesses da classe empresarial. Visando isso foi estabelecida uma parceria com o objetivo de
+                                divulgar o trabalho de ambas as empresas obtendo novos resultados.</p>
+                        </div>
+                    </div>
                 </blockquote>
                 <blockquote class="blockquote blockquote-reverse">
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                    <footer class="blockquote-footer">
-                        Someone famous in
-                        <cite title="Source Title">Source Title</cite>
-                    </footer>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h4 class="timeline-item-title">
+                                <a href="#">UNICETEX</a>
+                            </h4>
+                            <p class="timeline-item-description">O Centro de Inovação, Empreendedorismo e Extensão Universitária visa estruturar um espaço de integração
+                                de natureza empreendedora com a implantação de projetos de pesquisa, ensino e extensão universitária,
+                                tais como o da Incubadora de Empresas do Agronegócio de Pirassununga (UNITec), além de estimular a
+                                formação de uma rede de cooperação para tratar da capacitação de recursos humanos na área de negócios
+                                junto ao Campus da USP de Pirassununga.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/img/Unicetex.jpg" alt="Picture of frog by Ben Fredericson" class="img-fluid">
+                        </div>
+                    </div>
                 </blockquote>
             </div>
         </div>

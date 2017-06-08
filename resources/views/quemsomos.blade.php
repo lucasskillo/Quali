@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('parceiros_ative')
+@section('institucional_ative')
     active
 @stop
 @section('content')
