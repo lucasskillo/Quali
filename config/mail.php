@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'),
+    "driver" => "smtp",
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.live.com'),
+    "host" => "smtp.mailtrap.io",
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 587),
+    "port" => 2525,
 
     /*
     |--------------------------------------------------------------------------
@@ -55,10 +55,7 @@ return [
     |
     */
 
-    'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'lucas_skillo@hotmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'Contato Qualimentos'),
-    ],
+    'from' => ['address' => 'from@exampe.com', 'name' => 'Example'],
 
     /*
     |--------------------------------------------------------------------------
@@ -71,7 +68,7 @@ return [
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -84,9 +81,8 @@ return [
     |
     */
 
-    'username' => env('lucas_skillo@hotmail.com'),
-
-    'password' => env('demolay08'),
+    "username" => "a44f2f4b6eaec1",
+    "password" => "fb377811be4574",
 
     /*
     |--------------------------------------------------------------------------
@@ -99,25 +95,6 @@ return [
     |
     */
 
-    'sendmail' => '/usr/sbin/sendmail -bs',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Markdown Mail Settings
-    |--------------------------------------------------------------------------
-    |
-    | If you are using Markdown based email rendering, you may configure your
-    | theme and component paths here, allowing you to customize the design
-    | of the emails. Or, you may simply stick with the Laravel defaults!
-    |
-    */
-
-    'markdown' => [
-        'theme' => 'default',
-
-        'paths' => [
-            resource_path('views/vendor/mail'),
-        ],
-    ],
-
+    "sendmail" => "/usr/sbin/sendmail -bs",
+    "pretend" => false
 ];

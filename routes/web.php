@@ -15,9 +15,9 @@ Route::get('/', function() {
     return view('home');
 });
 
-Route::get('contato', array('as' => 'contato', 'uses' =>'HomeController@contato'));
+Route::get('contato', array('as' => 'contato', 'uses' =>'ContatoController@contato'));
 
-Route::post('contato', 'HomeController@postContato');
+Route::post('contato', 'ContatoController@postContato');
 
 Route::get('portifolio', function () {
     return view('portifolio');
@@ -39,8 +39,6 @@ Route::get('gestao', function () {
     return view('gestao');
 });
 
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('email', function () {
+    return view('email');
+});

@@ -33,9 +33,9 @@
 
     <!-- Le fav and touch icons - @todo: fill with your icons or remove -->
     <link rel="shortcut icon" href="assets/img/icons/favicon.ico">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/assets/img/icons/114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/assets/img/icons/72x72.png">
-    <link rel="apple-touch-icon" href="assets/assets/img/icons/default.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/img/icons/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
