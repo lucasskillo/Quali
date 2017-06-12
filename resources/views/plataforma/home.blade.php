@@ -9,14 +9,6 @@
         <div class="col-lg-10">
             <h2>Home</h2>
         </div>
-        <ol class="breadcrumb">
-            <li>
-                <a>Configurações</a>
-            </li>
-            <li class="active">
-                <strong>Usuários</strong>
-            </li>
-        </ol>
 
         <div class="col-lg-2">
 

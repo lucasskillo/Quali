@@ -29,7 +29,7 @@
                     <small>Entre em contato conosco</small>
                 </h2>
                 <!-- The form: submits to itself -->
-                {{ Form::open(array('action' => 'ContatoController@contato', 'role' => 'form')) }}
+                {{ Form::open(array('action' => 'ContatoController@postContato', 'role' => 'form')) }}
                     <div class="form-group">
                         <label class="sr-only" for="contact-name">Name</label>
                         {{ Form::text('nome', null, array('placeholder'=>'Nome', 'class'=>'form-control')) }}
