@@ -12,33 +12,35 @@
 */
 
 Route::get('/', function() {
-    return view('home');
+    return view('site/home');
 });
 
-Route::get('contato', array('as' => 'contato', 'uses' =>'ContatoController@contato'));
+Route::get('contato', function () {
+    return view('site/contato');
+});
 
 Route::post('contato', 'ContatoController@postContato');
 
 Route::get('portifolio', function () {
-    return view('portifolio');
+    return view('site/portifolio');
 });
 
 Route::get('parceiros', function () {
-    return view('parceiros');
+    return view('site/parceiros');
 });
 
 Route::get('quemsomos', function () {
-    return view('quemsomos');
+    return view('site/quemsomos');
 });
 
 Route::get('mej', function () {
-    return view('mej');
+    return view('site/mej');
 });
 
 Route::get('gestao', function () {
-    return view('gestao');
+    return view('site/gestao');
 });
 
 Route::get('email', function () {
-    return view('email');
+    return view('site/email');
 });

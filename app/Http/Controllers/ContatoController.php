@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Mail;
 class ContatoController extends Controller
 {
     public function contato() {
-        return View('contato');
+        return View('site\contato');
     }
     public function postContato() {
         $rules = array(
@@ -30,7 +30,7 @@ class ContatoController extends Controller
 
             Mail::send('email', $data, function($message) {
                 $message->from(Input::get('email'), Input::get('nome'));
-                $message->to('lucas_skillo@yahoo.com.br') ->subject('Contato Teste');
+                $message->to('lucas_skillo@yahoo.com.br') ->subject('Contato Site');
             });
             return Redirect::to('contato') ->with('message_sucesso', 'Mensagem enviada com sucesso!');
         }
