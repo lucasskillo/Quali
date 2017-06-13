@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Qualimentos | @yied('plataforma_titie')</title>
+    <title>Qualimentos | @yield('plataforma_title')</title>
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <!-- Add local styles, mostly for plugins css file -->
     <!-- Add jQuery Style direct - used for jQGrid plugin -->
-    <link href="assets/css/plataforma/Scripts/plugins/jquery-ui/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/plataforma/Scripts/plugins/jquery-ui/jquery-ui.css') }}" rel="stylesheet">
 
     <!-- Primary Inspinia style -->
-    <link href="assets/css/plataforma/Content/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/plataforma/Content/animate.css" rel="stylesheet">
-    <link href="assets/css/plataforma/Content/style.css" rel="stylesheet">
-    <link href="assets/css/plataforma/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/plataforma/Content/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/plataforma/Content/animate.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/plataforma/Content/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/plataforma/fonts/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/plataforma/fonts/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/plataforma/Content/plugins/dataTables/datatables.min.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -32,7 +34,7 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="assets/img/plataforma/Images/profile_small.jpg" />
+                            <img alt="image" class="img-circle" src="{{ asset('assets/img/plataforma/Images/profile_small.jpg') }}" />
                              </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Lucas de Souza</strong>
@@ -46,16 +48,16 @@
                     </div>
                 </li>
                 <li>
-                    <a href="/admin"><i class="fa fa-diamond"></i> <span class="nav-label">Home</span></a>
+                    <a href="/admin"><i class="fa fa-home" aria-hidden="true"></i> <span class="nav-label">Home</span></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Clientes</span></a>
+                    <a href="/admin/clientes"><i class="fa fa-users" aria-hidden="true"></i> <span class="nav-label">Clientes</span></a>
                 </li>
-                <li class="landing_link">
-                    <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Processo Selectivo</span></a>
+                <li>
+                    <a href="/admin/processoseletivo"><i class="fa fa-suitcase" aria-hidden="true"></i><span class="nav-label">Processo Selectivo</span></a>
                 </li>
-                <li class="landing_link">
-                    <a href="#"><i class="fa fa-th-large"></i>
+                <li>
+                    <a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i>
                         <span class="nav-label">Workshop</span>
                         <span class="fa arrow"></span>
                     </a>
@@ -65,12 +67,12 @@
                     </ul>
                 </li>
                 <li class="landing_link">
-                    <a href="#"><i class="fa fa-th-large"></i>
+                    <a href="#"><i class="fa fa-cog" aria-hidden="true"></i>
                         <span class="nav-label">Configurações</span>
                         <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="/admin/usuarios">Usuarios</a></li>
+                        <li><a href="admin/usuarios">Usuarios</a></li>
                     </ul>
                 </li>
             </ul>
@@ -116,18 +118,65 @@
 <!-- End wrapper-->
 
 <!-- Section for main scripts render -->
-<script src="assets/js/plataforma/Scripts/jquery-2.1.1.min.js"></script>
+<script src="{{ asset('assets/js/plataforma/Scripts/jquery-2.1.1.min.js') }}"></script>
 
-<script src="assets/js/plataforma/Scripts/bootstrap.min.js"></script>
+<script src="{{ asset('assets/js/plataforma/Scripts/bootstrap.min.js') }}"></script>
 
-<script src="assets/js/plataforma/Scripts/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="{{ asset('assets/js/plataforma/Scripts/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
 
-<script src="assets/js/plataforma/Scripts/plugins/metisMenu/metisMenu.min.js"></script>
-<script src="assets/js/plataforma/Scripts/plugins/pace/pace.min.js"></script>
-<script src="assets/js/plataforma/Scripts/app/inspinia.js"></script>
+<script src="{{ asset('assets/js/plataforma/Scripts/plugins/metisMenu/metisMenu.min.js') }}"></script>
+<script src="{{ asset('assets/js/plataforma/Scripts/plugins/pace/pace.min.js') }}"></script>
+<script src="{{ asset('assets/js/plataforma/Scripts/app/inspinia.js') }}"></script>
 
 <!-- Skin config script - only for demo purpose-->
-<script src="assets/js/plataforma/Scripts/app/skin.config.min.js"></script>
+<script src="{{ asset('assets/js/plataforma/Scripts/app/skin.config.min.js') }}"></script>
+<script src="{{ asset('assets/js/plataforma/Scripts/plugins/dataTables/datatables.min.js') }}"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
 
+        $('.dataTables-example').DataTable({
+            pageLength: 25,
+            dom: '<"html5buttons"B>lTfgitp',
+            buttons: [
+                { extend: 'copy' },
+                { extend: 'csv' },
+                { extend: 'excel', title: 'ExampleFile' },
+                { extend: 'pdf', title: 'ExampleFile' },
+
+                {
+                    extend: 'print',
+                    customize: function (win) {
+                        $(win.document.body).addClass('white-bg');
+                        $(win.document.body).css('font-size', '10px');
+
+                        $(win.document.body).find('table')
+                            .addClass('compact')
+                            .css('font-size', 'inherit');
+                    }
+                }
+            ],
+            oLanguage: {
+                "sProcessing": "Aguarde enquanto os dados são carregados ...",
+                "sLengthMenu": "Mostrar _MENU_ registros por pagina",
+                "sZeroRecords": "Nenhum registro correspondente ao criterio encontrado",
+                "sInfoEmtpy": "Exibindo 0 a 0 de 0 registros",
+                "sInfo": "Exibindo de _START_ a _END_ de _TOTAL_ registros",
+                "sInfoFiltered": "",
+                "sSearch": "Procurar",
+                "oPaginate": {
+                    "sFirst":    "Primeiro",
+                    "sPrevious": "Anterior",
+                    "sNext":     "Próximo",
+                    "sLast":     "Último"
+                }
+            }
+
+        });
+
+
+
+    });
+
+</script>
 </body>
 </html>

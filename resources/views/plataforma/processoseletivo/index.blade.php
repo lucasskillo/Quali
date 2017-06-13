@@ -7,13 +7,13 @@
 @section('plataforma_content')
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
-            <h2>Usuários</h2>
+            <h2>Processo Seletivo</h2>
             <ol class="breadcrumb">
                 <li>
-                    <a>Configurações</a>
+                    <a>Processo Seletivo</a>
                 </li>
                 <li class="active">
-                    <strong>Usuários</strong>
+                    <strong>Index</strong>
                 </li>
             </ol>
         </div>
@@ -34,33 +34,38 @@
                                 <th>#</th>
                                 <th>Nome</th>
                                 <th>E-mail</th>
-                                <th>Departamento</th>
+                                <th>Ano</th>
+                                <th>Período</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr class="gradeX">
                                 <td>1</td>
                                 <td>Lucas de Souza</td>
-                                <td>lucas@qualimentosjr.com.br</td>
-                                <td class="center">TI</td>
+                                <td>lucas@hotmail.com</td>
+                                <td class="center">Noturno</td>
+                                <td class="center">2016</td>
                             </tr>
                             <tr class="gradeC">
                                 <td>2</td>
                                 <td>Mayta Lais</td>
-                                <td>mayta@qualimentosjr.com.br</td>
-                                <td class="center">Consultoria</td>
+                                <td>mayta@hotmail.com</td>
+                                <td class="center">Diurno</td>
+                                <td class="center">2017</td>
                             </tr>
                             <tr class="gradeA">
                                 <td>3</td>
                                 <td>Giovana</td>
-                                <td>giovana@qualimentosjr.com.br</td>
-                                <td class="center">Finanças</td>
+                                <td>giovana@hotmail.com</td>
+                                <td class="center">Noturno</td>
+                                <td class="center">2017</td>
                             </tr>
                             <tr class="gradeA">
                                 <td>4</td>
                                 <td>Ursula</td>
-                                <td>ursula@qualimentosjr.com.br</td>
-                                <td class="center">Marketing</td>
+                                <td>ursula@hotmail.com</td>
+                                <td class="center">Diurno</td>
+                                <td class="center">2017</td>
                             </tr>
                             </tbody>
                             <tfoot>
@@ -68,7 +73,8 @@
                                 <th>#</th>
                                 <th>Nome</th>
                                 <th>E-mail</th>
-                                <th>Departamento</th>
+                                <th>Ano</th>
+                                <th>Período</th>
                             </tr>
                             </tfoot>
                         </table>

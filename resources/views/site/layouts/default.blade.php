@@ -72,6 +72,11 @@
                         </li>
                     </ul>
                 </address>
+                <a href="/admin">
+                    <h5 class="text-uppercase text-grey-dark">
+                        Painel Admin
+                    </h5>
+                </a>
             </div>
         </div>
 

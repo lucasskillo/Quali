@@ -7,13 +7,13 @@
 @section('plataforma_content')
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
-            <h2>Usuários</h2>
+            <h2>Clientes</h2>
             <ol class="breadcrumb">
                 <li>
-                    <a>Configurações</a>
+                    <a>Clientes</a>
                 </li>
                 <li class="active">
-                    <strong>Usuários</strong>
+                    <strong>Index</strong>
                 </li>
             </ol>
         </div>
@@ -33,42 +33,36 @@
                             <tr>
                                 <th>#</th>
                                 <th>Nome</th>
-                                <th>E-mail</th>
-                                <th>Departamento</th>
+                                <th>Contato</th>
+                                <th>Setor</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr class="gradeX">
                                 <td>1</td>
-                                <td>Lucas de Souza</td>
-                                <td>lucas@qualimentosjr.com.br</td>
+                                <td>RSITech</td>
+                                <td>Lucas</td>
                                 <td class="center">TI</td>
                             </tr>
                             <tr class="gradeC">
                                 <td>2</td>
-                                <td>Mayta Lais</td>
-                                <td>mayta@qualimentosjr.com.br</td>
-                                <td class="center">Consultoria</td>
+                                <td>Friboi</td>
+                                <td>Mayta</td>
+                                <td class="center">Frigorifico</td>
                             </tr>
                             <tr class="gradeA">
                                 <td>3</td>
+                                <td>Microsoft</td>
                                 <td>Giovana</td>
-                                <td>giovana@qualimentosjr.com.br</td>
-                                <td class="center">Finanças</td>
-                            </tr>
-                            <tr class="gradeA">
-                                <td>4</td>
-                                <td>Ursula</td>
-                                <td>ursula@qualimentosjr.com.br</td>
-                                <td class="center">Marketing</td>
+                                <td class="center">TI</td>
                             </tr>
                             </tbody>
                             <tfoot>
                             <tr>
                                 <th>#</th>
                                 <th>Nome</th>
-                                <th>E-mail</th>
-                                <th>Departamento</th>
+                                <th>Contato</th>
+                                <th>Setor</th>
                             </tr>
                             </tfoot>
                         </table>

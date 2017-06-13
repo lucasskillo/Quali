@@ -52,11 +52,19 @@ Route::group(['prefix' => 'admin'], function () {
         return view('plataforma/home');
     });
 
-    Route::get('usuarios/', function ()    {
+    Route::get('usuarios', function ()    {
         return view('plataforma/users/index');
     });
 
-    Route::get('workshops/', function ()    {
+    Route::get('workshops', function ()    {
         return view('plataforma/workshop/index');
+    });
+
+    Route::get('clientes', function ()    {
+        return view('plataforma/clientes/index');
+    });
+
+    Route::get('processoseletivo', function ()    {
+        return view('plataforma/processoseletivo/index');
     });
 });
