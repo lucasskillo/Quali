@@ -47,8 +47,7 @@ Route::group(['prefix' => ''], function () {
     Route::post('contato', 'ContatoController@postContato');
 });
 
-Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', function ()    {
+    Route::get('admin', function ()    {
         return view('plataforma/home');
     });
 
@@ -67,4 +66,3 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('processoseletivo', function ()    {
         return view('plataforma/processoseletivo/index');
     });
-});

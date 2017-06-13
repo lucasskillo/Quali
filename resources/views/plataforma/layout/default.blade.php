@@ -11,15 +11,14 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <!-- Add local styles, mostly for plugins css file -->
     <!-- Add jQuery Style direct - used for jQGrid plugin -->
-    <link href="{{ asset('assets/css/plataforma/Scripts/plugins/jquery-ui/jquery-ui.css') }}" rel="stylesheet">
+    <link href="assets/css/plataforma/Scripts/plugins/jquery-ui/jquery-ui.css" rel="stylesheet">
 
     <!-- Primary Inspinia style -->
-    <link href="{{ asset('assets/css/plataforma/Content/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/plataforma/Content/animate.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/plataforma/Content/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/plataforma/fonts/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/plataforma/fonts/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/plataforma/Content/plugins/dataTables/datatables.min.css') }}" rel="stylesheet">
+    <link href="assets/css/plataforma/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/plataforma/Content/animate.css" rel="stylesheet">
+    <link href="assets/css/plataforma/Content/style.css" rel="stylesheet">
+    <link href="assets/css/plataforma/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/plataforma/Content/plugins/dataTables/datatables.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -118,19 +117,19 @@
 <!-- End wrapper-->
 
 <!-- Section for main scripts render -->
-<script src="{{ asset('assets/js/plataforma/Scripts/jquery-2.1.1.min.js') }}"></script>
+<script src="assets/js/plataforma/Scripts/jquery-2.1.1.min.js"></script>
 
-<script src="{{ asset('assets/js/plataforma/Scripts/bootstrap.min.js') }}"></script>
+<script src="assets/js/plataforma/Scripts/bootstrap.min.js"></script>
 
-<script src="{{ asset('assets/js/plataforma/Scripts/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
+<script src="assets/js/plataforma/Scripts/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-<script src="{{ asset('assets/js/plataforma/Scripts/plugins/metisMenu/metisMenu.min.js') }}"></script>
-<script src="{{ asset('assets/js/plataforma/Scripts/plugins/pace/pace.min.js') }}"></script>
-<script src="{{ asset('assets/js/plataforma/Scripts/app/inspinia.js') }}"></script>
+<script src="assets/js/plataforma/Scripts/plugins/metisMenu/metisMenu.min.js"></script>
+<script src="assets/js/plataforma/Scripts/plugins/pace/pace.min.js"></script>
+<script src="assets/js/plataforma/Scripts/app/inspinia.js') }}"></script>
 
 <!-- Skin config script - only for demo purpose-->
-<script src="{{ asset('assets/js/plataforma/Scripts/app/skin.config.min.js') }}"></script>
-<script src="{{ asset('assets/js/plataforma/Scripts/plugins/dataTables/datatables.min.js') }}"></script>
+<script src="assets/js/plataforma/Scripts/app/skin.config.min.js"></script>
+<script src="assets/js/plataforma/Scripts/plugins/dataTables/datatables.min.js}"></script>
 <script type="text/javascript">
     $(document).ready(function () {
 
