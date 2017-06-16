@@ -4,6 +4,10 @@
     Home
 @stop
 
+@section('active_processoseletivo')
+    active
+@stop
+
 @section('plataforma_content')
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
@@ -18,13 +22,25 @@
             </ol>
         </div>
 
-        <div class="col-lg-2">
-
+        <div class="col-lg-2" style="margin-top: 2%;">
+            <a href="processoseletivos/create">
+                <button type="button"  class="btn btn-w-m btn-primary">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    Novo
+                </button>
+            </a>
         </div>
     </div>
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
             <div class="col-lg-12">
+                <!-- will be used to show any messages -->
+                @if (Session::has('message'))
+                    <div class="alert alert-success alert-dismissable" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        {{ Session::get('message') }}
+                    </div>
+                @endif
                 <div class="ibox float-e-margins">
                     <div class="ibox-content">
 

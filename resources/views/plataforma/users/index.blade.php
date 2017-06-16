@@ -4,6 +4,10 @@
     Home
 @stop
 
+@section('active_configurações')
+    active
+@stop
+
 @section('plataforma_content')
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
@@ -18,13 +22,25 @@
             </ol>
         </div>
 
-        <div class="col-lg-2">
-
+        <div class="col-lg-2" style="margin-top: 2%;">
+            <a href="users/create">
+                <button type="button"  class="btn btn-w-m btn-primary">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    Novo
+                </button>
+            </a>
         </div>
     </div>
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
             <div class="col-lg-12">
+                <!-- will be used to show any messages -->
+                @if (Session::has('message'))
+                    <div class="alert alert-success alert-dismissable" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        {{ Session::get('message') }}
+                    </div>
+                @endif
                 <div class="ibox float-e-margins">
                     <div class="ibox-content">
 
@@ -35,33 +51,30 @@
                                 <th>Nome</th>
                                 <th>E-mail</th>
                                 <th>Departamento</th>
+                                <th class="disabled-sorting text-center">Ações</th>
                             </tr>
                             </thead>
                             <tbody>
+                            @foreach ($users as $user)
                             <tr class="gradeX">
-                                <td>1</td>
-                                <td>Lucas de Souza</td>
-                                <td>lucas@qualimentosjr.com.br</td>
-                                <td class="center">TI</td>
+                                <td>{{ $user->id }}</td>
+                                <td>{{ $user->name }}</td>
+                                <td>{{ $user->email }}</td>
+                                <td>{{ $user->departament }}</td>
+                                <td class="text-center">
+                                    <div>
+                                    <a href="/admin/users/{{ $user->id }}/edit" class="btn btn-simple btn-warning btn-icon edit"><i class="fa fa-edit"></i></a>
+                                    <a>
+                                        <form action="/admin/users/{{ $user->id }}" method="POST">
+                                            <input type="hidden" name="_method" value="delete">
+                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                            <button type="submit" class="btn btn-simple btn-danger btn-icon remove"><i class="fa fa-times"></i></button>
+                                        </form>
+                                    </a>
+                                    </div>
+                                </td>
                             </tr>
-                            <tr class="gradeC">
-                                <td>2</td>
-                                <td>Mayta Lais</td>
-                                <td>mayta@qualimentosjr.com.br</td>
-                                <td class="center">Consultoria</td>
-                            </tr>
-                            <tr class="gradeA">
-                                <td>3</td>
-                                <td>Giovana</td>
-                                <td>giovana@qualimentosjr.com.br</td>
-                                <td class="center">Finanças</td>
-                            </tr>
-                            <tr class="gradeA">
-                                <td>4</td>
-                                <td>Ursula</td>
-                                <td>ursula@qualimentosjr.com.br</td>
-                                <td class="center">Marketing</td>
-                            </tr>
+                            @endforeach
                             </tbody>
                             <tfoot>
                             <tr>
@@ -69,6 +82,7 @@
                                 <th>Nome</th>
                                 <th>E-mail</th>
                                 <th>Departamento</th>
+                                <th class="disabled-sorting text-center">Ações</th>
                             </tr>
                             </tfoot>
                         </table>

@@ -11,58 +11,37 @@
 |
 */
 
+Auth::routes();
+
 Route::group(['prefix' => ''], function () {
-    Route::get('portifolio', function () {
-        return view('site/portifolio');
-    });
 
-    Route::get('parceiros', function () {
-        return view('site/parceiros');
-    });
+    Route::get('/', 'WebSiteController@home');
 
-    Route::get('quemsomos', function () {
-        return view('site/quemsomos');
-    });
+    Route::get('portifolio', 'WebSiteController@portifolio');
 
-    Route::get('mej', function () {
-        return view('site/mej');
-    });
+    Route::get('parceiros', 'WebSiteController@parceiros');
 
-    Route::get('gestao', function () {
-        return view('site/gestao');
-    });
+    Route::get('quemsomos', 'WebSiteController@quemsomos');
 
-    Route::get('email', function () {
-        return view('email');
-    });
+    Route::get('mej', 'WebSiteController@mej');
 
-    Route::get('/', function() {
-        return view('site/home');
-    });
+    Route::get('gestao', 'WebSiteController@gestao');
 
-    Route::get('contato', function () {
-        return view('site/contato');
-    });
+    Route::get('contato', 'WebSiteController@contato');
 
     Route::post('contato', 'ContatoController@postContato');
 });
 
-    Route::get('admin', function ()    {
-        return view('plataforma/home');
-    });
+Route::group(['prefix' => 'admin','middleware' => 'auth'], function () {
 
-    Route::get('usuarios', function ()    {
-        return view('plataforma/users/index');
-    });
+    Route::get('/', 'HomeController@index');
 
-    Route::get('workshops', function ()    {
-        return view('plataforma/workshop/index');
-    });
+    Route::resource('users', 'UserController');
 
-    Route::get('clientes', function ()    {
-        return view('plataforma/clientes/index');
-    });
+    Route::resource('workshops', 'WorkshopController');
 
-    Route::get('processoseletivo', function ()    {
-        return view('plataforma/processoseletivo/index');
-    });
+    Route::resource('clientes', 'ClienteController');
+
+    Route::resource('processosseletivos', 'ProcessoSeletivoController');
+});
+

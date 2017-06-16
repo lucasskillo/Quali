@@ -11,14 +11,14 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <!-- Add local styles, mostly for plugins css file -->
     <!-- Add jQuery Style direct - used for jQGrid plugin -->
-    <link href="assets/css/plataforma/Scripts/plugins/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/plataforma/Scripts/plugins/jquery-ui/jquery-ui.css') }}" rel="stylesheet">
 
     <!-- Primary Inspinia style -->
-    <link href="assets/css/plataforma/Content/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/plataforma/Content/animate.css" rel="stylesheet">
-    <link href="assets/css/plataforma/Content/style.css" rel="stylesheet">
-    <link href="assets/css/plataforma/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/plataforma/Content/plugins/dataTables/datatables.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/plataforma/Content/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/plataforma/Content/animate.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/plataforma/Content/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/plataforma/fonts/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/plataforma/Content/plugins/dataTables/datatables.min.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -36,8 +36,8 @@
                             <img alt="image" class="img-circle" src="{{ asset('assets/img/plataforma/Images/profile_small.jpg') }}" />
                              </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Lucas de Souza</strong>
-                             </span> <span class="text-muted text-xs block">Desenvolvedor <b class="caret"></b></span> </span> </a>
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{ Auth::user()->name }}</strong>
+                             </span> <span class="text-muted text-xs block">{{ Auth::user()->departament }} <b class="caret"></b></span> </span> </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                             <li><a href="#">Trocar senha</a></li>
                         </ul>
@@ -46,32 +46,32 @@
                         QUALI
                     </div>
                 </li>
-                <li>
-                    <a href="/admin"><i class="fa fa-home" aria-hidden="true"></i> <span class="nav-label">Home</span></a>
+                <li class="@yield('active_home')">
+                    <a href="{!! url('admin') !!}"><i class="fa fa-home" aria-hidden="true"></i> <span class="nav-label">Home</span></a>
                 </li>
-                <li>
-                    <a href="/admin/clientes"><i class="fa fa-users" aria-hidden="true"></i> <span class="nav-label">Clientes</span></a>
+                <li class="@yield('active_cliente')">
+                    <a href="{!! url('/admin/clientes') !!}"><i class="fa fa-users" aria-hidden="true"></i> <span class="nav-label">Clientes</span></a>
                 </li>
-                <li>
-                    <a href="/admin/processoseletivo"><i class="fa fa-suitcase" aria-hidden="true"></i><span class="nav-label">Processo Selectivo</span></a>
+                <li class="@yield('active_processoseletivo')">
+                    <a href="{!! url('/admin/processosseletivos') !!}"><i class="fa fa-suitcase" aria-hidden="true"></i><span class="nav-label">Processo Selectivo</span></a>
                 </li>
-                <li>
+                <li class="@yield('active_workshops')">
                     <a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i>
                         <span class="nav-label">Workshop</span>
                         <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="/admin/workshops">Lista de Workshop</a></li>
+                        <li><a href="{!! url('/admin/workshops') !!}">Lista de Workshop</a></li>
                         <li><a href="#">Participantes</a></li>
                     </ul>
                 </li>
-                <li class="landing_link">
+                <li class="landing_link @yield('active_configurações')">
                     <a href="#"><i class="fa fa-cog" aria-hidden="true"></i>
                         <span class="nav-label">Configurações</span>
                         <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="admin/usuarios">Usuarios</a></li>
+                        <li><a href="{!! url('/admin/users') !!}">Usuarios</a></li>
                     </ul>
                 </li>
             </ul>
@@ -89,9 +89,15 @@
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <li>
-                        <a href="#">
-                            <i class="fa fa-sign-out"></i> Log out
+                        <a href="{{ url('/logout') }}"
+                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();" class="text-danger">
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            Sair
                         </a>
+                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
                     </li>
                 </ul>
             </nav>
@@ -102,10 +108,10 @@
     <!-- Footer -->
         <div class="footer">
             <div class="pull-right">
-                Qualimentos Jr.
+
             </div>
             <div>
-                <strong>Copyright</strong> Example Company &copy; 2014 - 2017
+                <strong>Qualimentos Jr.</strong> - Consultoria de Alimentos &copy; 2014 - 2017
             </div>
         </div>
 
@@ -117,19 +123,19 @@
 <!-- End wrapper-->
 
 <!-- Section for main scripts render -->
-<script src="assets/js/plataforma/Scripts/jquery-2.1.1.min.js"></script>
+<script src="{{ asset('assets/js/plataforma/Scripts/jquery-2.1.1.min.js') }}"></script>
 
-<script src="assets/js/plataforma/Scripts/bootstrap.min.js"></script>
+<script src="{{ asset('assets/js/plataforma/Scripts/bootstrap.min.js') }}"></script>
 
-<script src="assets/js/plataforma/Scripts/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="{{ asset('assets/js/plataforma/Scripts/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
 
-<script src="assets/js/plataforma/Scripts/plugins/metisMenu/metisMenu.min.js"></script>
-<script src="assets/js/plataforma/Scripts/plugins/pace/pace.min.js"></script>
-<script src="assets/js/plataforma/Scripts/app/inspinia.js') }}"></script>
+<script src="{{ asset('assets/js/plataforma/Scripts/plugins/metisMenu/metisMenu.min.js') }}"></script>
+<script src="{{ asset('assets/js/plataforma/Scripts/plugins/pace/pace.min.js') }}"></script>
+<script src="{{ asset('assets/js/plataforma/Scripts/app/inspinia.js') }}"></script>
 
 <!-- Skin config script - only for demo purpose-->
-<script src="assets/js/plataforma/Scripts/app/skin.config.min.js"></script>
-<script src="assets/js/plataforma/Scripts/plugins/dataTables/datatables.min.js}"></script>
+<script src="{{ asset('assets/js/plataforma/Scripts/app/skin.config.min.js') }}"></script>
+<script src="{{ asset('assets/js/plataforma/Scripts/plugins/dataTables/datatables.min.js') }}"></script>
 <script type="text/javascript">
     $(document).ready(function () {
 
@@ -155,18 +161,26 @@
                 }
             ],
             oLanguage: {
-                "sProcessing": "Aguarde enquanto os dados são carregados ...",
-                "sLengthMenu": "Mostrar _MENU_ registros por pagina",
-                "sZeroRecords": "Nenhum registro correspondente ao criterio encontrado",
-                "sInfoEmtpy": "Exibindo 0 a 0 de 0 registros",
-                "sInfo": "Exibindo de _START_ a _END_ de _TOTAL_ registros",
-                "sInfoFiltered": "",
-                "sSearch": "Procurar",
+                "sEmptyTable": "Nenhum registro encontrado",
+                "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+                "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+                "sInfoPostFix": "",
+                "sInfoThousands": ".",
+                "sLengthMenu": "_MENU_ resultados por página",
+                "sLoadingRecords": "Carregando...",
+                "sProcessing": "Processando...",
+                "sZeroRecords": "Nenhum registro encontrado",
+                "sSearch": "Pesquisar",
                 "oPaginate": {
-                    "sFirst":    "Primeiro",
+                    "sNext": "Próximo",
                     "sPrevious": "Anterior",
-                    "sNext":     "Próximo",
-                    "sLast":     "Último"
+                    "sFirst": "Primeiro",
+                    "sLast": "Último"
+                },
+                "oAria": {
+                    "sSortAscending": ": Ordenar colunas de forma ascendente",
+                    "sSortDescending": ": Ordenar colunas de forma descendente"
                 }
             }
 

@@ -4,6 +4,10 @@
     Home
 @stop
 
+@section('active_cliente')
+    active
+@stop
+
 @section('plataforma_content')
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
@@ -18,13 +22,25 @@
             </ol>
         </div>
 
-        <div class="col-lg-2">
-
+        <div class="col-lg-2" style="margin-top: 2%;">
+            <a href="clientes/create">
+                <button type="button"  class="btn btn-w-m btn-primary">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    Novo
+                </button>
+            </a>
         </div>
     </div>
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
             <div class="col-lg-12">
+                <!-- will be used to show any messages -->
+                @if (Session::has('message'))
+                    <div class="alert alert-success alert-dismissable" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        {{ Session::get('message') }}
+                    </div>
+                @endif
                 <div class="ibox float-e-margins">
                     <div class="ibox-content">
 
@@ -32,37 +48,41 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Nome</th>
+                                <th>Razão Social</th>
+                                <th>E-mail</th>
                                 <th>Contato</th>
-                                <th>Setor</th>
+                                <th class="disabled-sorting text-center">Ações</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr class="gradeX">
-                                <td>1</td>
-                                <td>RSITech</td>
-                                <td>Lucas</td>
-                                <td class="center">TI</td>
-                            </tr>
-                            <tr class="gradeC">
-                                <td>2</td>
-                                <td>Friboi</td>
-                                <td>Mayta</td>
-                                <td class="center">Frigorifico</td>
-                            </tr>
-                            <tr class="gradeA">
-                                <td>3</td>
-                                <td>Microsoft</td>
-                                <td>Giovana</td>
-                                <td class="center">TI</td>
-                            </tr>
+                            @foreach ($clientes as $cliente)
+                                <tr class="gradeX">
+                                    <td>{{ $cliente->id }}</td>
+                                    <td>{{ $cliente->RazaoSocial }}</td>
+                                    <td>{{ $cliente->Email }}</td>
+                                    <td>{{ $cliente->contato }}</td>
+                                    <td class="text-center">
+                                        <div>
+                                            <a href="/admin/clientes/{{ $cliente->id }}/edit" class="btn btn-simple btn-warning btn-icon edit"><i class="fa fa-edit"></i></a>
+                                            <a>
+                                                <form action="/admin/clientes/{{ $cliente->id }}" method="POST">
+                                                    <input type="hidden" name="_method" value="delete">
+                                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                    <button type="submit" class="btn btn-simple btn-danger btn-icon remove"><i class="fa fa-times"></i></button>
+                                                </form>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
                             </tbody>
                             <tfoot>
                             <tr>
                                 <th>#</th>
-                                <th>Nome</th>
+                                <th>Razão Social</th>
+                                <th>E-mail</th>
                                 <th>Contato</th>
-                                <th>Setor</th>
+                                <th class="disabled-sorting text-center">Ações</th>
                             </tr>
                             </tfoot>
                         </table>

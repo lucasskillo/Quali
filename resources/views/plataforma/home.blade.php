@@ -4,6 +4,10 @@
     Home
 @stop
 
+@section('active_home')
+    active
+@stop
+
 @section('plataforma_content')
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
